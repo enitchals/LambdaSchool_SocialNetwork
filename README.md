@@ -18,5 +18,9 @@
     CS1:
         Student 1.
         Student 2.
-    CS2 
+    CS2
+# Social Network
+  1. Search friends? <- this could be useful
+  2. Star people in the list, Private Note: { id: ‘’, note: ‘’ }
+
 
