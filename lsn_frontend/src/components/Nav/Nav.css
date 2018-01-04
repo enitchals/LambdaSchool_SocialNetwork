@@ -4,6 +4,20 @@
     width: 100%;
     align-items: center;
     background-color: rgb(12, 68, 105);
+    height: 45px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.Nav a {
+    text-decoration: none;
+    padding-right: 20px;
+    color: white;
+}
+
+.Nav a:hover {
+    text-decoration: none;
+    color: rgb(99, 157, 196);
 }
 
 .NavWrap {
@@ -18,11 +32,15 @@
     color: white;
 }
 
+.NavLink--selected {
+    text-decoration: none;
+    padding-right: 20px;
+    color: rgb(99, 157, 196);
+}
+
 .NavHome img{
     width: 25px;
     padding-top: 4px;
-    margin-left: 4px;
-    margin-right: 10px;
 }
 
 .LeftNav {
