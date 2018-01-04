@@ -10,29 +10,10 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 //End Redux Imports
 // Import Components after here -----------------------
-<<<<<<< HEAD
-import Nav from './components/Nav/Nav';
-import Registration from './components/Registration/Registration';
-import Profile from './components/Profile/Profile';
-import List from './components/List/List';
-// End Components import ------------------------------
-
-ReactDOM.render(
-    <BrowserRouter>
-        <div>
-            <Nav />
-            <Route exact path='/' component={Registration} />
-            <Route path='/Profile' component={Profile} />
-            <Route path='/List' component={List} />
-        </div>
-    </BrowserRouter>
-,document.getElementById('root'));
-=======
 import Nav from "./components/Nav/Nav";
 import Registration from "./components/Registration/Registration";
 import Profile from "./components/Profile/Profile";
 import List from "./components/List/List";
-import Login from "./components/Login/Login";
 // End Components import ------------------------------
 
 ReactDOM.render(
@@ -47,4 +28,3 @@ ReactDOM.render(
   </BrowserRouter>,
   document.getElementById("root")
 );
->>>>>>> yasin
