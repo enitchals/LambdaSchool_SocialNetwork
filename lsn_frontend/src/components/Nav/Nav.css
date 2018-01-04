@@ -1,0 +1,46 @@
+.Nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(12, 68, 105);
+}
+
+.NavWrap {
+    display: inline-flex;
+    width: 700px;
+}
+
+.NavLink {
+    text-decoration: none;
+    padding-right: 20px;
+    color: white;
+}
+
+.NavHome img{
+    width: 25px;
+    padding-top: 4px;
+    margin-left: 4px;
+    margin-right: 10px;
+}
+
+.LeftNav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 400px;
+}
+
+.RightNav {
+    width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.NavSearch {
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    margin-right: 20px;
+}

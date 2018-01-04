@@ -13,7 +13,6 @@ import Nav from './components/Nav/Nav';
 import Registration from './components/Registration/Registration';
 import Profile from './components/Profile/Profile';
 import List from './components/List/List';
-import Login from './components/Login/Login';
 // End Components import ------------------------------
 
 ReactDOM.render(
@@ -21,7 +20,6 @@ ReactDOM.render(
         <div>
             <Nav />
             <Route exact path='/' component={Registration} />
-            <Route path='/Login' component={Login} />
             <Route path='/Profile' component={Profile} />
             <Route path='/List' component={List} />
         </div>
