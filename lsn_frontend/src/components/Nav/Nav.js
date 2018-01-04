@@ -36,7 +36,7 @@ class Nav extends Component {
 
     render() {
         return(
-            <div className='Nav'>
+            <div className='Nav noselect'>
                 <div className='NavWrap'>
                     <div className='LeftNav'>
                         <NavLink className='NavHome' to='/'><img src='/img/Lambda_Social_White.png'/></NavLink>
