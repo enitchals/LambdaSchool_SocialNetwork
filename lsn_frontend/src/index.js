@@ -1,29 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.css";
+import "./index.css";
 // Begin Import Router Stuff here ---------------------
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from "react-router-dom";
 
 // End Router Stuff imports ---------------------------
 // Import Redux Here if Necesary
 
 //End Redux Imports
 // Import Components after here -----------------------
-import Nav from './components/Nav/Nav';
-import Registration from './components/Registration/Registration';
-import Profile from './components/Profile/Profile';
-import List from './components/List/List';
-import Login from './components/Login/Login';
+import Nav from "./components/Nav/Nav";
+import Registration from "./components/Registration/Registration";
+import Profile from "./components/Profile/Profile";
+import List from "./components/List/List";
+import Login from "./components/Login/Login";
 // End Components import ------------------------------
 
 ReactDOM.render(
-    <BrowserRouter>
-        <div>
-            <Nav />
-            <Route exact path='/' component={Registration} />
-            <Route path='/Login' component={Login} />
-            <Route path='/Profile' component={Profile} />
-            <Route path='/List' component={List} />
-        </div>
-    </BrowserRouter>
-,document.getElementById('root'));
+  <BrowserRouter>
+    <div>
+      <Nav />
+      <Route exact path="/" component={Registration} />
+      <Route path="/Login" component={Login} />
+      <Route path="/Profile" component={Profile} />
+      <Route path="/List" component={List} />
+    </div>
+  </BrowserRouter>,
+  document.getElementById("root")
+);
