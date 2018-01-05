@@ -32,10 +32,12 @@ class ListItem extends Component {
                 cohort: this.props.data.cohort,
                 role: this.props.data.role,
                 imagePath: this.props.data.imagePath,
+                id: this.props.data._id,
             });
     }
     render() {
         return(
+            <Link to={`/list/`}>
             <div className='ListItem'>
                 <div className='ListItem__Component'>
                     <img className='ListItem__Image' src={this.state.imagePath}/>
@@ -51,6 +53,7 @@ class ListItem extends Component {
                 </div>
                 
             </div>
+            </Link>
         );
     }
 }
@@ -66,12 +69,12 @@ class List extends Component {
     componentDidMount() {
         axios.get('http://471e2504.ngrok.io/users').then((response) =>{
             this.setState({memberList: response.data}); // Set the list of members in a property called memberList on List's state.
-            console.log('The list of members from server is: ',response);
+            // console.log('The list of members from server is: ',response);
         });
     }
 
     render() {
-        console.log(this.state.memberList);
+        // console.log('The list of members is',this.state.memberList);
         return(
             <div className='MainWrapper'>
                 <div className='MembersList'>
