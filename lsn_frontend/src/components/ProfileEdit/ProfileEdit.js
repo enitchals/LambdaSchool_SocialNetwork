@@ -16,7 +16,7 @@ class ProfileEdit extends Component {
 
     render() {
         return(
-            <div>ProfileEdit Placeholder</div>
+            <div className='MainWrapper'>ProfileEdit Placeholder</div>
         );
     }
 }
