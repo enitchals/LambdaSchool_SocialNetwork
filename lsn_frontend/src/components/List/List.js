@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './List.css';
 
-const testListItem = { /* Comment this declaration out when backend is reachable, for testing purposes only */
-    name: 'Test Test',
-    email: 'testemail@testemail.io',
-    cohort: 'CS1-TEST',
-    role: 'RoleTest',
-    imagePath: 'https://i.imgur.com/gKMqPjv.png',
-}
+const serverURL = 'http://471e2504.ngrok.io'
+
+// const testListItem = { /* Comment this declaration out when backend is reachable, for testing purposes only */
+//     name: 'Test Test',
+//     email: 'testemail@testemail.io',
+//     cohort: 'CS1-TEST',
+//     role: 'RoleTest',
+//     imagePath: 'https://i.imgur.com/gKMqPjv.png',
+// }
 
 class ListItem extends Component {
     constructor() {
@@ -62,21 +64,18 @@ class List extends Component {
     }
 
     componentDidMount() {
-        axios.get('URL/users').then((response) =>{
-            this.setState({memberList: response}); // Set the list of members in a property called memberList on List's state.
+        axios.get('http://471e2504.ngrok.io/users').then((response) =>{
+            this.setState({memberList: response.data}); // Set the list of members in a property called memberList on List's state.
             console.log('The list of members from server is: ',response);
         });
     }
 
     render() {
+        console.log(this.state.memberList);
         return(
             <div className='MainWrapper'>
                 <div className='MembersList'>
                     <h1>List of Members</h1>
-                    <ListItem data={testListItem} /> {/* Comment this line out when backend is reachable, for testing purposes only */}
-                    <ListItem data={testListItem} /> {/* Comment this line out when backend is reachable, for testing purposes only */}
-                    <ListItem data={testListItem} /> {/* Comment this line out when backend is reachable, for testing purposes only */}
-                    <ListItem data={testListItem} /> {/* Comment this line out when backend is reachable, for testing purposes only */}
                     {this.state.memberList.map((item, index)=>{ // Map through each item in the members list and create a new row for the list.
                         return (
                             <ListItem key={index} data={item} id={index}/>

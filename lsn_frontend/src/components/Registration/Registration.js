@@ -33,7 +33,7 @@ class Registration extends React.Component {
     const { loginEmail, loginPw } = this.state;
 
     axios
-      .post("URL/login", {
+      .post(`${URL}/login`, {
         email: loginEmail,
         password: loginPw
       })
@@ -49,7 +49,7 @@ class Registration extends React.Component {
       password: regPw,
       role: role
     };
-    axios.post("URL/new-user", newUser).then(result => {});
+    axios.post(`${URL}/new-user`, newUser).then(result => {});
   };
 
   makeVisible = e => {

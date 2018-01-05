@@ -41,8 +41,8 @@ class Nav extends Component {
                     <div className='LeftNav'>
                         <NavLink className='NavHome' to='/'><img src='/img/Lambda_Social_White.png'/></NavLink>
                         <input type='text' value={this.state.searchWord} className='NavSearch' onClick={this.handleClick} onKeyPress={this.handleReturn} onChange={this.handleChange}/>
-                        <NavLink className='NavLink' activeClassName='NavLink--selected' to='/profile'>Profile</NavLink>
-                        <NavLink className='NavLink' activeClassName='NavLink--selected' to='/list'>Members</NavLink>
+                        <NavLink className='NavLink' to='/profile'>Profile</NavLink>
+                        <NavLink className='NavLink' to='/list'>Members</NavLink>
                     </div>
                     <div className='RightNav'>
                         <NavLink className='NavLink' activeClassName='NavLink--selected' to='/'>Login</NavLink>
