@@ -67,129 +67,131 @@ class Registration extends React.Component {
 
   render() {
     return (
-      <div className="login">
-        <div className="toggles">
-          <h1>Welcome to Lambda School Social Network</h1>
-          <Button
-            className="toggle-btn"
-            onClick={this.makeVisible}
-            color="primary"
-            name="showLogin"
-          >
-            Login
-          </Button>
-          <Button
-            active
-            className="toggle-btn"
-            onClick={this.makeVisible}
-            color="success"
-            name="showReg"
-          >
-            Register
-          </Button>
+      <div className='MainWrapper'>
+        <div className="login">
+          <div className="toggles">
+            <h1>Welcome to Lambda School Social Network</h1>
+            <Button
+              className="toggle-btn"
+              onClick={this.makeVisible}
+              color="primary"
+              name="showLogin"
+            >
+              Login
+            </Button>
+            <Button
+              active
+              className="toggle-btn"
+              onClick={this.makeVisible}
+              color="success"
+              name="showReg"
+            >
+              Register
+            </Button>
+          </div>
+          {this.state.showLogin && (
+            <div className="login-form">
+              <h1>Login</h1>
+              <Form id="login">
+                <FormGroup>
+                  <Label for="loginEmail">Email</Label>
+                  <Input
+                    type="email"
+                    name="loginEmail"
+                    id="loginEmail"
+                    placeholder="Email"
+                    onChange={this.onChange}
+                    required
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="loginPw">Password</Label>
+                  <Input
+                    type="password"
+                    name="loginPw"
+                    id="loginPw"
+                    placeholder="password"
+                    onChange={this.onChange}
+                    required
+                  />
+                </FormGroup>
+                <Button onClick={this.signIn} color="primary">
+                  Login
+                </Button>
+              </Form>
+            </div>
+          )}
+          {this.state.showReg && (
+            <div className="reg-form">
+              <h1>Register</h1>
+              <Form id="register">
+                <FormGroup>
+                  <Label for="role">Role</Label>
+                  <Input
+                    type="select"
+                    name="select"
+                    name="role"
+                    onChange={this.onChange}
+                    required
+                  >
+                    <option>-</option>
+                    <option>student</option>
+                    <option>instructor</option>
+                    <option>TA</option>
+                    <option>graduate</option>
+                  </Input>
+                </FormGroup>
+                <FormGroup>
+                  <Label for="fName">First Name</Label>
+                  <Input
+                    type="fName"
+                    name="fName"
+                    id="fName"
+                    placeholder="First Name"
+                    onChange={this.onChange}
+                    required
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="lName">Last Name</Label>
+                  <Input
+                    type="lName"
+                    name="lName"
+                    id="lName"
+                    placeholder="Last Name"
+                    onChange={this.onChange}
+                    required
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="regEmail">Email</Label>
+                  <Input
+                    type="email"
+                    name="regEmail"
+                    id="regEmail"
+                    placeholder="Email"
+                    onChange={this.onChange}
+                    required
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="regPw">Password</Label>
+                  <Input
+                    type="password"
+                    name="regPw"
+                    id="regPw"
+                    placeholder="password"
+                    onChange={this.onChange}
+                    required
+                  />
+                </FormGroup>
+                <Button onClick={this.register} color="primary">
+                  Register
+                </Button>
+              </Form>
+            </div>
+          )}
         </div>
-        {this.state.showLogin && (
-          <div className="login-form">
-            <h1>Login</h1>
-            <Form id="login">
-              <FormGroup>
-                <Label for="loginEmail">Email</Label>
-                <Input
-                  type="email"
-                  name="loginEmail"
-                  id="loginEmail"
-                  placeholder="Email"
-                  onChange={this.onChange}
-                  required
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label for="loginPw">Password</Label>
-                <Input
-                  type="password"
-                  name="loginPw"
-                  id="loginPw"
-                  placeholder="password"
-                  onChange={this.onChange}
-                  required
-                />
-              </FormGroup>
-              <Button onClick={this.signIn} color="primary">
-                Login
-              </Button>
-            </Form>
-          </div>
-        )}
-        {this.state.showReg && (
-          <div className="reg-form">
-            <h1>Register</h1>
-            <Form id="register">
-              <FormGroup>
-                <Label for="role">Role</Label>
-                <Input
-                  type="select"
-                  name="select"
-                  name="role"
-                  onChange={this.onChange}
-                  required
-                >
-                  <option>-</option>
-                  <option>student</option>
-                  <option>instructor</option>
-                  <option>TA</option>
-                  <option>graduate</option>
-                </Input>
-              </FormGroup>
-              <FormGroup>
-                <Label for="fName">First Name</Label>
-                <Input
-                  type="fName"
-                  name="fName"
-                  id="fName"
-                  placeholder="First Name"
-                  onChange={this.onChange}
-                  required
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label for="lName">Last Name</Label>
-                <Input
-                  type="lName"
-                  name="lName"
-                  id="lName"
-                  placeholder="Last Name"
-                  onChange={this.onChange}
-                  required
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label for="regEmail">Email</Label>
-                <Input
-                  type="email"
-                  name="regEmail"
-                  id="regEmail"
-                  placeholder="Email"
-                  onChange={this.onChange}
-                  required
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label for="regPw">Password</Label>
-                <Input
-                  type="password"
-                  name="regPw"
-                  id="regPw"
-                  placeholder="password"
-                  onChange={this.onChange}
-                  required
-                />
-              </FormGroup>
-              <Button onClick={this.register} color="primary">
-                Register
-              </Button>
-            </Form>
-          </div>
-        )}
       </div>
     );
   }

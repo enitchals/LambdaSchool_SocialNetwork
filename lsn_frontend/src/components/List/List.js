@@ -16,7 +16,9 @@ class List extends Component {
 
     render() {
         return(
-            <div>List Placeholder</div>
+            <div className='MainWrapper'>
+                <div>List Placeholder</div>
+            </div>
         );
     }
 }
