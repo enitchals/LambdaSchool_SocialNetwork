@@ -1,8 +1,7 @@
 import { combineReducers } from 'redux'
-import {GET_USER,GET_POSTS} from '../actions'
+import {GET_USER,GET_POSTS,GET_COMMENTS} from '../actions'
 
 const userReducer = (user=[],action) => {
-    console.log('action', action);
     switch(action.type) {
         case GET_USER:
             return action.payload.data;
@@ -12,7 +11,6 @@ const userReducer = (user=[],action) => {
 }
 
 const postReducer = (posts=[],action) => {
-    console.log('action', action);
     switch(action.type) {
         case GET_POSTS:
             return action.payload.data;
@@ -21,10 +19,20 @@ const postReducer = (posts=[],action) => {
     }
 }
 
+const commentReducer = (comments=[],action) => {
+    switch(action.type) {
+        case GET_COMMENTS:
+            return action.payload.data;
+        default:
+            return comments;
+    }
+}
+
 
 const rootReducer = combineReducers({
     user: userReducer,
-    posts: postReducer
+    posts: postReducer,
+    comment:commentReducer
 });
 
 export default rootReducer;

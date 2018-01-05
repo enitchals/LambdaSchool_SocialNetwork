@@ -15,31 +15,31 @@ class Profile extends Component {
         return(
             <div className= 'ProfileBody'>
                 <div className= 'ProfileInfo'>
-                <div id='Profile__image'>
+                <img id = 'Profile__image' src={user.imagePath} />
+                <div className='ProfileInfo__bodyitem'>
+                { `Name: ${user.name}`}
                 </div>
                 <div className='ProfileInfo__bodyitem'>
-                Name:{user.name}
+                { `Role: ${user.role}`}
                 </div>
                 <div className='ProfileInfo__bodyitem'>
-                Role:{user.name}
+                { `Location: ${user.location}`}
                 </div>
                 <div className='ProfileInfo__bodyitem'>
-                Location:{user.location}
+                { `Github: ${user.gitHub}`}
                 </div>
                 <div className='ProfileInfo__bodyitem'>
-                Github:{user.name}
+                {`Speciality: ${user.specialty}`}
                 </div>
                 <div className='ProfileInfo__bodyitem'>
-                Speciality:{user.specialty}
+                {`About Me: ${user.aboutMe}`}
                 </div>
                 </div>
                 <div className='Feed'>
-                <div className='PostBox'>
-                About Me: {user.name}
-                </div>
                 <Status />
                 <Posts />
                 </div>
+                
             </div>
         );
     }

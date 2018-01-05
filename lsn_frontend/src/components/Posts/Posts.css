@@ -1,9 +1,53 @@
-.PostBox{
+.container{
     display: flex;
-    width: 90%;
-    margin-top:20px;
-    margin-left:20px;
-    padding: 20px;
-    height: 60px;
-    border: 1px solid #f7f7f7cc;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 80%;
+    flex-grow: 1;
+    margin: auto;
+    background-color: white;
+}
+.container__header{
+    display: flex;
+    flex-direction: row;
+    padding:10px;
+    height:60px;
+    border-bottom: 1px #f7f7f7cc;
+    justify-content: flex-start;
+    align-items: center;
+}
+.container__body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    flex-grow: 1;
+    margin: auto;
+}
+.container__body__img {
+    width:90%;
+    height: 300px;  
+    margin: auto;
+}
+.container__body__textbox{
+    display: flex;
+    width:90%;
+    font-size: 14px;
+    margin: 10px auto;
+}
+.container__header__thumbnail{
+    width:30px;
+    height:30px;
+    margin-right: 10px;
+}
+.container__comments{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding:10px;
+    margin:5px 20px;
+    font-size: 12px;
+}
+.glyphicon{
+    margin-left: 25px;
 }

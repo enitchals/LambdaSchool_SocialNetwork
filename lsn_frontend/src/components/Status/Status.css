@@ -1,12 +1,8 @@
-.PostBox{
-    display: flex;
-    width: 90%;
-    margin-top:20px;
-    margin-left:20px;
-    padding: 20px;
-    height: 60px;
-    border: 1px solid #f7f7f7cc;
-}
-.PostButton{
 
+.Postinput{
+    height: 60px;
+    width:80%;
+    display: flex;
+    margin: 20px auto;
+    background-color: white;
 }

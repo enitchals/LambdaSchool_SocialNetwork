@@ -8,15 +8,11 @@ class Status extends Component{
 
     render(){
         return (
-            <div className= 'PostBox'>
-                this is some Random 
-                <button>Post</button>
-            </div> 
+            <form onSubmit={this.addComment}>
+                <input className='Postinput' type="text" placeholder="Add new post" onChange={this.handleCommentInput} />
+            </form> 
         )
     }
 }
-
-
-
 
 export default Status;
