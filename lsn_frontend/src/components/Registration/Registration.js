@@ -4,7 +4,7 @@ import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 import "./Registration.css";
 import axios from "axios";
 
-const URL = "localhost:3030";
+const URL = "http://471e2504.ngrok.io";
 class Registration extends React.Component {
   constructor() {
     super();
@@ -31,22 +31,23 @@ class Registration extends React.Component {
     const { loginEmail, loginPw } = this.state;
 
     axios
-      .post("URL/login", { email: loginEmail, password: loginPw })
+      .post("URL/login", {
+        email: loginEmail,
+        password: loginPw
+      })
       .then(result => {});
   };
 
   register = e => {
     e.preventDefault();
     const { role, fName, lName, regEmail, regPw } = this.state;
-
-    axios
-      .post("URL/new-user", {
-        name: `${fName} ${lName}`,
-        email: regEmail,
-        password: regPw,
-        role: role
-      })
-      .then(result => {});
+    let newUser = {
+      name: fName,
+      email: regEmail,
+      password: regPw,
+      role: role
+    };
+    axios.post("URL/new-user", newUser).then(result => {});
   };
 
   componentDidMount() {}
@@ -129,7 +130,7 @@ class Registration extends React.Component {
               <Label for="regEmail">Email</Label>
               <Input
                 type="email"
-                name="email"
+                name="regEmail"
                 id="regEmail"
                 placeholder="Email"
                 onChange={this.onChange}
@@ -140,7 +141,7 @@ class Registration extends React.Component {
               <Label for="regPw">Password</Label>
               <Input
                 type="password"
-                name="password"
+                name="regPw"
                 id="regPw"
                 placeholder="password"
                 onChange={this.onChange}
