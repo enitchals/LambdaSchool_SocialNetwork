@@ -2,11 +2,12 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    align-items: center;
     background-color: rgb(12, 68, 105);
     height: 45px;
     font-size: 18px;
     font-weight: 600;
+    position: fixed;
+    top: 0;
 }
 
 .Nav a {
@@ -21,9 +22,11 @@
 }
 
 .NavWrap {
+    align-items: space-around;
     display: inline-flex;
-    width: 700px;
-    min-width: 400px;
+    width: 55%;
+    min-width: 700px;
+    margin: 0 auto;
 }
 
 .NavLink {
@@ -47,11 +50,11 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 400px;
+    width: 50%;
 }
 
 .RightNav {
-    width: 300px;
+    width: 50%;
     display: flex;
     justify-content: flex-end;
     align-items: center;

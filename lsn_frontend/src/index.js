@@ -14,6 +14,7 @@ import Nav from "./components/Nav/Nav";
 import Registration from "./components/Registration/Registration";
 import Profile from "./components/Profile/Profile";
 import List from "./components/List/List";
+import ProfileEdit from './components/ProfileEdit/ProfileEdit';
 // End Components import ------------------------------
 
 ReactDOM.render(
@@ -21,9 +22,10 @@ ReactDOM.render(
     <div>
       <Nav />
       <Route exact path="/" component={Registration} />
-      <Route path="/Login" component={Registration} />
-      <Route path="/Profile" component={Profile} />
-      <Route path="/List" component={List} />
+      <Route path="/login" component={Registration} />
+      <Route path="/profile" component={Profile} />
+      <Route path="/list" component={List} />
+      <Route path="/edit" component={ProfileEdit} />
     </div>
   </BrowserRouter>,
   document.getElementById("root")
