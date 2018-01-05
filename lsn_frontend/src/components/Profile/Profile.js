@@ -8,7 +8,7 @@ import {getUserDetails} from '../../actions'
 
 class Profile extends Component {
     componentDidMount() {
-        this.props.getUserDetails();
+        this.props.getUserDetails(this.props.match.params.id);
     }
     render() {
         let user = this.props.user
