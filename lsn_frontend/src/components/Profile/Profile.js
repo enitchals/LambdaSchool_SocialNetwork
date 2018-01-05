@@ -38,7 +38,7 @@ class Profile extends Component {
                     </div>
                     <div className='Feed'>
                         <Status />
-                        <Posts />
+                        <Posts postid={this.props.match.params.id}/>
                     </div>
                     
                 </div>
