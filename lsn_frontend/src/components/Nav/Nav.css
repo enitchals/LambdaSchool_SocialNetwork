@@ -2,14 +2,31 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    align-items: center;
     background-color: rgb(12, 68, 105);
+    height: 45px;
+    font-size: 18px;
+    font-weight: 600;
+    position: fixed;
+    top: 0;
+}
+
+.Nav a {
+    text-decoration: none;
+    padding-right: 20px;
+    color: white;
+}
+
+.Nav a:hover {
+    text-decoration: none;
+    color: rgb(99, 157, 196);
 }
 
 .NavWrap {
+    align-items: space-around;
     display: inline-flex;
-    width: 700px;
-    min-width: 400px;
+    width: 55%;
+    min-width: 700px;
+    margin: 0 auto;
 }
 
 .NavLink {
@@ -18,22 +35,26 @@
     color: white;
 }
 
-.NavHome img{
+.NavLink--selected {
+    text-decoration: none;
+    padding-right: 20px;
+    color: rgb(99, 157, 196);
+}
+
+.NavHome img {
     width: 25px;
     padding-top: 4px;
-    margin-left: 4px;
-    margin-right: 10px;
 }
 
 .LeftNav {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 400px;
+    width: 50%;
 }
 
 .RightNav {
-    width: 300px;
+    width: 50%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -44,4 +65,5 @@
     border: none;
     width: 200px;
     margin-right: 20px;
+    text-align: center;
 }
