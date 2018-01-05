@@ -10,17 +10,18 @@ class Posts extends Component{
     componentDidMount() {
         this.props.getPostDetails(this.props.postid);
     }
+    
 
     render(){
         let posts = this.props.posts;
-        console.log(posts)
+    
         return (
             <div>
             {posts.map((post,i) => {
                 return (
                     <div className='container'>
                     <div className='container__header'>
-                        <img className='container__header__thumbnail' alt='' src={post.imagePath}/>
+                       <img className='container__header__thumbnail' alt='' src={post.imagePath}/> 
                         <h4>{post.author.name}</h4>
                     </div>
                     <div className='container__body'>
@@ -35,7 +36,6 @@ class Posts extends Component{
                     />
                     {post.comments.map((comment,i)=>{
                         return (
-            
                             <div className='container__comments'>
                                 {`${comment.author.name}: ${comment.text}`}
                             </div>
