@@ -30,7 +30,6 @@ ReactDOM.render(
         <div>
             <Nav />
             <Route exact path='/' component={Registration} />
-            <Route path='/Login' component={Login} />
             <Route path='/Profile' component={Profile} />
             <Route path='/List' component={List} />
         </div>
