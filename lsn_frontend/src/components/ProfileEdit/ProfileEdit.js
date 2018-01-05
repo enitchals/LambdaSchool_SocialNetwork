@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './Login.css';
+import './ProfileEdit.css';
 
-class Login extends Component {
+class ProfileEdit extends Component {
     constructor() {
         super();
         this.state = {
@@ -16,9 +16,9 @@ class Login extends Component {
 
     render() {
         return(
-            <div>Login Placeholder</div>
+            <div className='MainWrapper'>ProfileEdit Placeholder</div>
         );
     }
 }
 
-export default Login;
+export default ProfileEdit;
