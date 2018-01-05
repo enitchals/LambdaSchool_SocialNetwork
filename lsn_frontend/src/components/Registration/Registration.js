@@ -15,6 +15,9 @@ class Registration extends React.Component {
       lName: "",
       regEmail: "",
       regPw: "",
+      cohort: "",
+      location: "",
+      specialty: "",
       showLogin: true,
       showReg: false
     };
@@ -42,12 +45,28 @@ class Registration extends React.Component {
 
   register = e => {
     e.preventDefault();
-    const { role, fName, lName, regEmail, regPw } = this.state;
+    const {
+      role,
+      fName,
+      lName,
+      regEmail,
+      regPw,
+      cohort,
+      location,
+      specialty,
+      bio,
+      gh
+    } = this.state;
     let newUser = {
       name: fName,
       email: regEmail,
       password: regPw,
-      role: role
+      role: role,
+      cohort: cohort,
+      location: location,
+      specialty: specialty,
+      aboutMe: bio,
+      gitHub: gh
     };
     axios.post(`${URL}/new-user`, newUser).then(result => {});
   };
@@ -67,7 +86,7 @@ class Registration extends React.Component {
 
   render() {
     return (
-      <div className='MainWrapper'>
+      <div className="MainWrapper">
         <div className="login">
           <div className="toggles">
             <h1>Welcome to Lambda School Social Network</h1>
@@ -142,6 +161,17 @@ class Registration extends React.Component {
                   </Input>
                 </FormGroup>
                 <FormGroup>
+                  <Label for="cohort">Cohort</Label>
+                  <Input
+                    type="cohort"
+                    name="cohort"
+                    id="cohort"
+                    placeholder="Cohort"
+                    onChange={this.onChange}
+                    required
+                  />
+                </FormGroup>
+                <FormGroup>
                   <Label for="fName">First Name</Label>
                   <Input
                     type="fName"
@@ -180,9 +210,51 @@ class Registration extends React.Component {
                     type="password"
                     name="regPw"
                     id="regPw"
-                    placeholder="password"
+                    placeholder="Password"
                     onChange={this.onChange}
                     required
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="location">Location</Label>
+                  <Input
+                    type="location"
+                    name="location"
+                    id="location"
+                    placeholder="Location"
+                    onChange={this.onChange}
+                    required
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="gh">GitHub Profile</Label>
+                  <Input
+                    type="gh"
+                    name="gh"
+                    id="gh"
+                    placeholder="GitHub Profile"
+                    onChange={this.onChange}
+                    required
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="specialty">Specialty</Label>
+                  <Input
+                    type="specialty"
+                    name="specialty"
+                    id="specialty"
+                    placeholder="Specialty"
+                    onChange={this.onChange}
+                    required
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="bio">Bio</Label>
+                  <Input
+                    type="bio"
+                    name="bio"
+                    id="bio"
+                    placeholder="Write about your hobbies, passions and self here."
                   />
                 </FormGroup>
                 <Button onClick={this.register} color="primary">

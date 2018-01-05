@@ -8,7 +8,7 @@ import {Glyphicon,Button} from 'react-bootstrap'
 
 class Posts extends Component{
     componentDidMount() {
-        this.props.getPostDetails();
+        this.props.getPostDetails(this.props.postid);
     }
 
     render(){

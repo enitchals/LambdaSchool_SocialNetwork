@@ -8,7 +8,7 @@ import {getUserDetails} from '../../actions'
 
 class Profile extends Component {
     componentDidMount() {
-        this.props.getUserDetails();
+        this.props.getUserDetails(this.props.match.params.id);
     }
     render() {
         let user = this.props.user
@@ -38,7 +38,7 @@ class Profile extends Component {
                     </div>
                     <div className='Feed'>
                         <Status />
-                        <Posts />
+                        <Posts postid={this.props.match.params.id}/>
                     </div>
                     
                 </div>
