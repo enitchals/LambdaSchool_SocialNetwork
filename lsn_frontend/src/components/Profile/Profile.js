@@ -13,7 +13,6 @@ class Profile extends Component {
     render() {
         let user = this.props.user
         return(
-<<<<<<< HEAD
             <div className= 'ProfileBody'>
                 <div className= 'ProfileInfo'>
                 <img id = 'Profile__image' src={user.imagePath} />
@@ -42,9 +41,6 @@ class Profile extends Component {
                 </div>
                 
             </div>
-=======
-            <div className='MainWrapper'>Profile Placeholder</div>
->>>>>>> 4987411af552baea92904f07505180dc27756680
         );
     }
 }
