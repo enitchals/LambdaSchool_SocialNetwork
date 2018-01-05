@@ -4,7 +4,7 @@ import Status from '../Status/Status'
 import Posts from '../Posts/Posts'
 import './Profile.css';
 import {connect} from 'react-redux';
-import {getUserDetails} from '../../actions'
+import {getUserDetails,addPostDetails} from '../../actions'
 
 class Profile extends Component {
     componentDidMount() {
@@ -37,7 +37,7 @@ class Profile extends Component {
                         </div>
                     </div>
                     <div className='Feed'>
-                        <Status />
+                        <Status addPostDetails={this.props.addPostDetails} author={user._id}/>
                         <Posts postid={this.props.match.params.id}/>
                     </div>
                     
@@ -53,4 +53,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps, { getUserDetails })(Profile);
+export default connect(mapStateToProps, { getUserDetails,addPostDetails })(Profile);

@@ -255,6 +255,7 @@ class Registration extends React.Component {
                     name="bio"
                     id="bio"
                     placeholder="Write about your hobbies, passions and self here."
+                    onChange={this.onChange}
                   />
                 </FormGroup>
                 <Button onClick={this.register} color="primary">

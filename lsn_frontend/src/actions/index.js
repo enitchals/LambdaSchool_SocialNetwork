@@ -1,6 +1,7 @@
 import axios from 'axios';
 export const GET_USER= 'GET_USER';
 export const GET_POSTS= 'GET_POSTS';
+export const ADD_POSTS= 'ADD_POSTS';
 export const GET_COMMENTS='GET_COMMENTS'
 
 export const getUserDetails = (id) => {
@@ -22,5 +23,16 @@ export const getPostDetails = (id) => {
     return {
         type: GET_POSTS,
         payload: getPostDetails
+    }
+};
+
+export const addPostDetails = (obj) => {
+    // Add the code for this action
+    // let payload = {};
+    const apiUrl = `http://471e2504.ngrok.io/posts/`;
+    const addPostDetails = axios.post(apiUrl,obj)
+    return {
+        type: ADD_POSTS,
+        payload: addPostDetails
     }
 };
